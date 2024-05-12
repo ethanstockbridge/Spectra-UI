@@ -1,0 +1,33 @@
+.bubbly-container {
+  background: rgb(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box; /* Ensure box-sizing is set to border-box */
+}
+
+.container {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.half-container {
+  width: max-content;
+  background: rgb(0, 0, 0, 0.4);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Media query for screens smaller than a certain width */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .half-container {
+    box-sizing: border-box;
+    width: auto;
+  }
+}

@@ -1,0 +1,13 @@
+.image-view{
+    height: 100%;
+    width: auto;
+}
+
+/* Media query for screens smaller than a certain width */
+@media (max-width: 768px) {
+    .image-view {
+        width: 100%;
+        height: auto;
+    }
+}
+  

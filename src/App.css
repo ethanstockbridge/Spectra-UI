@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App-header {
+  padding-left: 20px;
+  color: white;
+  background-color: #383D3F;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #262A2B;
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid #333; /* Add this line */
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tab:hover {
+  background-color: #555;
+}
+
+.tab.active {
+  background-color: #555;
+}
+
+.tab-content-container {
+  flex-grow: 1;
+  background-color: #383D3F;
+  overflow-y: auto; /* Optional: Add a scrollbar when the content is too long */
+}
+
+.tab-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
