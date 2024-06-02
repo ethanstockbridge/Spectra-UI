@@ -15,8 +15,8 @@ const ViewUI = () => {
   const [end_time, set_end_time] = useState('');
   const [additional_metrics, set_additional_metrics] = useState('');
   const [dataset_metrics, set_dataset_metrics] = useState('');
-  const [graph_species_distribution, set_graph_species_distribution] = useState('');
-  const [graph_species_count, set_graph_species_count] = useState('');
+  const [graph_class_distribution, set_graph_class_distribution] = useState('');
+  const [graph_class_count, set_graph_class_count] = useState('');
   const [graph_sensors, set_graph_sensors] = useState('');
   const [available_datasets, set_available_datasets] = useState([]);
   let { datasetName } = useParams();
@@ -101,8 +101,8 @@ const ViewUI = () => {
 
   const processDataset = async (dataset) => {
       set_dataset_metrics("Fetching dataset data")
-      set_graph_species_distribution(loading);
-      set_graph_species_count(loading);
+      set_graph_class_distribution(loading);
+      set_graph_class_count(loading);
       set_graph_sensors(loading);
       setImages([loading]);
       try {
@@ -119,8 +119,8 @@ const ViewUI = () => {
       }
 
       const result = await response.json();
-      set_graph_species_distribution(result.graph_distribution);
-      set_graph_species_count(result.graph_count)
+      set_graph_class_distribution(result.graph_distribution);
+      set_graph_class_count(result.graph_count)
       set_graph_sensors(result.graph_sensors)
       set_dataset_metrics(result.text);
       setImages(result.images)
@@ -173,13 +173,13 @@ const ViewUI = () => {
 
         <AudioComponent audioUrl={API_URLS.flask_api+"full_audio/"+selectedDataset} />
 
-        <img src={graph_species_distribution} alt="Species vs Time" style={{ width: '100%', maxWidth: '500px' }} />
+        <img src={graph_class_distribution} alt="Class distribution" style={{ width: '100%', maxWidth: '500px' }} />
 
         <br/>
-        <img src={graph_species_count} alt="Species counts" style={{ width: '100%', maxWidth: '500px' }} />
+        <img src={graph_class_count} alt="Class counts" style={{ width: '100%', maxWidth: '500px' }} />
 
         <br/>
-        <img src={graph_sensors} alt="Species counts" style={{ width: '100%', maxWidth: '500px' }} />
+        <img src={graph_sensors} alt="Class counts" style={{ width: '100%', maxWidth: '500px' }} />
 
         <div style = {{ display: 'flex' }}>
           <a href={dataset_api+'download_dataset/'+selectedDataset}><div className='bubbly-container' style = {{ color: "white" }}>Download dataset ZIP</div></a>

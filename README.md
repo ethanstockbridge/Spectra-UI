@@ -2,7 +2,7 @@
 Spectra is an artificial intelligence software that can identify the sound of multiple different classes, all at once!  
 Spectra identifies classes, generates sensor data graphs, and more.  
 Running on a cutting edge, yolo-based backend, this software is quick and efficient.  
-The below examples are showing how this can be used to identify multiple species of frogs.  
+The below examples are showing how this can be used to identify multiple classes.  
 The output contains a csv with all class identifications as well as sensor data interpolated from those detection times. Additionally, graphs are generated for easy identification and visualization. 
 Please note that this repository is coded in my free time with no funding, and thus may contain bugs.  
 Please see the associated [Core](https://github.com/ethanstockbridge/Spectra-Core) and [UI](https://github.com/ethanstockbridge/Spectra-UI) framework, which allows users to easily access the user interface on any browser.
@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 `npm start`
 
 Runs the app in the development mode.  
-Open [http://localhost:5000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -39,7 +39,7 @@ The website UI was designed with simplicity in mind, and an easy to use interfac
 ### Examples of resulting output graphs:
 | Distribution graph | Class counts | Class graph |
 |--------------------|--------------|-------------|
-|<img src="./images/graph_distribution.jpg" width="800"/>|<img src="./images/graph_species_count.jpg" width="800"/>|<img src="./images/graph_sensors.jpg" width="800"/>|
+|<img src="./images/graph_distribution.jpg" width="800"/>|<img src="./images/graph_classification_count.jpg" width="800"/>|<img src="./images/graph_sensors.jpg" width="800"/>|
 
 
 # Additional information
